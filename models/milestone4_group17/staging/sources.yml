@@ -38,7 +38,7 @@ sources:
           - name: longitude
             description: Longitude coordinate
           - name: address_type
-            description: 'Type of address (e.g., ADDRESS, INTERSECTION, BLOCKFACE)'
+            description: Type of address (e.g., ADDRESS, INTERSECTION, BLOCKFACE)
           - name: bbl
             description: Borough Block and Lot number (NYC tax lot id)
           - name: borough
@@ -48,7 +48,7 @@ sources:
           - name: community_board
             description: NYC Community Board district number
           - name: council_district
-            description: The City Council district where the service request is located.
+            description: The City Council district where the service request is located
           - name: descriptor_2
             description: Additional description of the complaint
           - name: open_data_channel_type
@@ -57,12 +57,10 @@ sources:
             description: Borough of park where incident occurred
           - name: park_facility_name
             description: Name of park facility where incident occurred
-          - name: resolution_action_updated_date
-            description: Date when resolution action was last updated
           - name: police_precinct
-            description: The NYPD precinct where the service request is located.
+            description: The NYPD precinct where the service request is located
           - name: resolution_action_updated_date
-            description: Date when responding agency last updated the service request.
+            description: Date when responding agency last updated the service request
           - name: resolution_description
             description: Description of how the request was resolved
           - name: status
@@ -74,5 +72,92 @@ sources:
           - name: y_coordinate_state_plane
             description: Y coordinate in NY State Plane projection system (NAD 83)
 
+      - name: source_nyc_open_housing_maintenance_code_violations
+        description: |
+          NYC Housing Maintenance Code violations.
+          One row per violation record.
+        columns:
+          - name: violationid
+            description: Unique identifier of violation
+          - name: buildingid
+            description: Unique identifier of building
+          - name: registrationid
+            description: Unique identifier of valid registration information
+          - name: boroid
+            description: Borough code (1=Manhattan, 2=Bronx, 3=Brooklyn, 4=Queens, 5=Staten Island)
+          - name: borough
+            description: Borough where the building is located
+          - name: housenumber
+            description: Street number of the building address
+          - name: lowhousenumber
+            description: Lowest house number if building has a range
+          - name: highhousenumber
+            description: Highest house number if building has a range
+          - name: streetname
+            description: Name of the street
+          - name: streetcode
+            description: Street code identifier
+          - name: postcode
+            description: Postal code of the building
+          - name: apartment
+            description: Apartment in violation if applicable
+          - name: story
+            description: Floor where violation occurred
+          - name: block
+            description: Tax block for building
+          - name: lot
+            description: Tax lot for building
+          - name: class
+            description: Violation severity (A = least serious, C = most serious)
+          - name: inspectiondate
+            description: Date when violation was observed
+          - name: approveddate
+            description: Date when violation was approved
+          - name: originalcertifybydate
+            description: Original deadline to certify correction
+          - name: originalcorrectbydate
+            description: Original deadline to correct violation
+          - name: newcertifybydate
+            description: Updated certify-by date if extended
+          - name: newcorrectbydate
+            description: Updated correct-by date if extended
+          - name: certifieddate
+            description: Date when violation was certified by owner
+          - name: ordernumber
+            description: Code representing violation type
+          - name: novid
+            description: Notice of Violation identifier
+          - name: novdescription
+            description: Description of the violation
+          - name: novissuedate
+            description: Date when notice was issued
+          - name: currentstatusid
+            description: Identifier for current violation status
+          - name: currentstatus
+            description: Current violation status
+          - name: currentstatusdate
+            description: Date when current status took effect
+          - name: novtype
+            description: Type of Notice of Violation (original/reissued)
+          - name: violationstatus
+            description: Status of violation (Open/Close)
+          - name: rentimpairing
+            description: Indicates serious housing condition affecting safety
+          - name: latitude
+            description: Latitude coordinate
+          - name: longitude
+            description: Longitude coordinate
+          - name: communityboard
+            description: NYC Community Board district
+          - name: councildistrict
+            description: NYC Council District
+          - name: censustract
+            description: Census tract identifier
+          - name: bin
+            description: Building Identification Number
+          - name: bbl
+            description: Borough-Block-Lot identifier
+          - name: nta
+            description: Neighborhood Tabulation Area
 
       
