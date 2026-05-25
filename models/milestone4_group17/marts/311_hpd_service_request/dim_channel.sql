@@ -10,7 +10,7 @@ WITH channel_values AS (
 final AS (
     SELECT
         {{ dbt_utils.generate_surrogate_key(['method_of_submission']) }} AS channel_key,
-        method_of_submission AS open_data_channel_type   -- 🔥 IMPORTANT FIX
+        method_of_submission AS open_data_channel_type   
     FROM channel_values
 )
 
