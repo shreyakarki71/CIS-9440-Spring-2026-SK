@@ -48,3 +48,5 @@ The pipeline includes automated data ingestion, data cleaning, deduplication, di
 ## Dashboard
 
 Interactive dashboards were developed in Looker Studio to visualize housing complaint trends, violations, resolution performance, and geographic patterns across NYC.
+
+### [View Interactive Looker Studio Dashboard](https://datastudio.google.com/s/gG0qaAlzQ1c)
