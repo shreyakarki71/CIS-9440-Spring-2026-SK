@@ -1,15 +1,50 @@
-Welcome to your new dbt project!
+# NYC Housing Complaints & Violations Analytics
 
-### Using the starter project
+An end-to-end data analytics pipeline analyzing NYC 311 No-Heat complaints and HPD housing violations to identify complaint trends, enforcement outcomes, resolution times, and repeat-offender buildings.
 
-Try running the following commands:
-- dbt run
-- dbt test
+## Project Overview
 
+This project integrates NYC 311 service request data with HPD housing violation data to better understand how heating complaints translate into housing violations and how outcomes vary across New York City.
 
-### Resources:
-- Learn more about dbt [in the docs](https://docs.getdbt.com/docs/introduction)
-- Check out [Discourse](https://discourse.getdbt.com/) for commonly asked questions and answers
-- Join the [dbt community](https://getdbt.com/community) to learn from other analytics engineers
-- Find [dbt events](https://events.getdbt.com) near you
-- Check out [the blog](https://blog.getdbt.com/) for the latest news on dbt's development and best practices
+The pipeline transforms raw public datasets into analytics-ready models and dashboards for reporting and analysis.
+
+## Tech Stack
+
+- SQL
+- Python
+- Google BigQuery
+- dbt
+- Google Cloud Run
+- Google Cloud Scheduler
+- Looker Studio
+
+## Data Pipeline
+
+NYC Open Data → Python → Google Cloud Run → BigQuery → dbt → Looker Studio
+
+The pipeline includes automated data ingestion, data cleaning, deduplication, dimensional modeling, data quality testing, and dashboard reporting.
+
+## Key Analysis
+
+- Complaint-to-Violation Rate
+- Average Violation Resolution Time
+- Repeat-Offender Buildings
+- Complaint Volume Growth
+- Borough and ZIP Code Trends
+
+## Data Sources
+
+- NYC 311 Service Requests
+- NYC HPD Housing Maintenance Code Violations
+
+## Repository Structure
+
+`models/` — dbt transformation and analytics models  
+`analyses/` — analytical SQL queries  
+`macros/` — reusable dbt macros  
+`tests/` — data quality tests  
+`seeds/` — reference data
+
+## Dashboard
+
+Interactive dashboards were developed in Looker Studio to visualize housing complaint trends, violations, resolution performance, and geographic patterns across NYC.
